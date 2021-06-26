@@ -58,8 +58,8 @@ window.onload = function() {
           ["elInY", "elCenterY", "elOutY"],
           {
             375: [100, 0, 100], // Screen width < 375
-            500: [100, 0, 200], // Screen width > 375 and < 500
-            900: [100, 0, 250], // Screen width > 900
+            500: [200, 0, 100], // Screen width > 375 and < 500
+            900: [250, 0, 100], // Screen width > 900
           },
         ]
       }
@@ -90,7 +90,7 @@ const faders = document.querySelectorAll(".fade-in");
 
 const appearOptions = {
   root: null,
-  threshold: 0.05,
+  threshold: 0.2,
   rootMargin: "-50px"
 };
 

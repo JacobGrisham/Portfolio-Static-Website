@@ -58,13 +58,26 @@ window.onload = function() {
           ["elInY", "elCenterY", "elOutY"],
           {
             375: [100, 0, 100], // Screen width < 375
-            500: [200, 0, 100], // Screen width > 375 and < 500
-            900: [250, 0, 100], // Screen width > 900
+            500: [100, 0, 200], // Screen width > 375 and < 500
+            900: [100, 0, 350], // Screen width > 900
           },
         ]
       }
     })
 }
+
+// Fade Out Banner Image when Scrolling Down
+$(window).scroll(() => {
+  var scrollTop = $(this).scrollTop();
+
+  $('.banner').css(
+    'background', () => {
+      var elementHeight = $(this).height(),
+      opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 0.4) + 0.8;
+      return `linear-gradient(to right bottom, rgba(13, 35, 55, 0.99), rgba(23, 45, 65, ${opacity}))`
+    }
+  );
+});
 
 // Popup for Project Info
 

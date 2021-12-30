@@ -19,6 +19,7 @@ body {
   overflow-x: hidden;
   overscroll-behavior-y: none;
   overscroll-behavior-x: none;
+  scroll-behavior: smooth; // not working
 }
 
 ::selection {
